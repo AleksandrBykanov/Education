@@ -1,0 +1,13 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import 'typography.scss';
+@import 'header.scss';
+
+:root {
+	--font-family: 'Jost', sans-serif;
+	--second-family: 'Poppins', sans-serif;
+	--third-family: 'Noto Sans', sans-serif;
+	--frame: #000000;
+	--main-text: #b2b2b2;
+	--text: #585454;
+}

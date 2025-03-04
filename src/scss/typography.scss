@@ -1,0 +1,68 @@
+@media only screen and (max-width: 1000px) {
+	h1 {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 140%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h3 {
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h4 {
+		font-weight: 800;
+		font-size: 14px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 1001px) {
+	h1 {
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h2 {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h3 {
+		font-weight: 800;
+		font-size: 32px;
+		line-height: 140%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h4 {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+	h5 {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 120%;
+		letter-spacing: 0;
+		margin: 0;
+	}
+}
