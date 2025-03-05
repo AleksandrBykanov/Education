@@ -2,12 +2,30 @@
 @import 'variables.scss';
 @import 'typography.scss';
 @import 'header.scss';
+@import 'courses.scss';
 
-:root {
-	--font-family: 'Jost', sans-serif;
-	--second-family: 'Poppins', sans-serif;
-	--third-family: 'Noto Sans', sans-serif;
-	--frame: #000000;
-	--main-text: #b2b2b2;
-	--text: #585454;
+body {
+	font-family: 'Jost', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
 }

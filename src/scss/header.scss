@@ -15,9 +15,9 @@
   .header-container {
     max-width: 393px;
     padding: 18px 20px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
 
   .header-navbar {
@@ -30,13 +30,14 @@
     width: 52px;
     height: 18px;
     position: relative;
+    cursor: pointer;
   }
   .header-logo-name {
-    font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px;
     color: $white;
     text-decoration: none;
+    margin-left: 25px;
   }
   .header-logo-square {
     border-radius: 4px;
@@ -54,10 +55,6 @@
     position: absolute;
     top: 6px;
     left: 7px;
-  }
-
-  .header-logo-name {
-    margin-left: 25px;
   }
 
   .header-item {
@@ -99,7 +96,7 @@
     font-size: 14px;
     line-height: 120%;
     text-align: center;
-    color: var(--main-text);
+    color: $light-gray;
     margin: 20px auto 0 auto;
     width: 286px;
   }
@@ -112,6 +109,7 @@
 
   .header-img2 {
     display: block;
+    width: 192px;
     margin-top: 41px;
     margin-left: auto;
     margin-right: auto;
@@ -121,6 +119,7 @@
     display: block;
     margin: 0 auto;
     margin-top: 41px;
+    width: 88px;
   }
 
   .header-p2 {
@@ -139,8 +138,8 @@
     justify-content: center;
     align-items: center;
     border: none;
-		margin-left: auto;
-		margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 38px;
     font-weight: 600;
     font-size: 18px;
@@ -151,10 +150,9 @@
     width: 202px;
     height: 38px;
     background: $white;
-		cursor: pointer;
+    cursor: pointer;
   }
 }
-
 
 @media only screen and (min-width: 1001px) {
   .header {
@@ -164,6 +162,7 @@
     background-position: center;
     border-radius: 0 0 72px 72px;
     width: 100%;
+    min-width: 1100px;
     height: 737px;
   }
   .header-logo,
@@ -171,22 +170,22 @@
     display: none;
   }
 
-	.header-container {
+  .header-container {
     max-width: 1280px;
-		padding: 20px;
-		margin-left: auto;
-		margin-right: auto;
-
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
- 
-	.header-list {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 40px;
-		padding: 0;
-		margin: 0;
-	}
+
+  .header-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+  }
 
   .header-item {
     border-radius: 40px;
@@ -194,16 +193,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-		
   }
 
   .header-link {
-    font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
     line-height: 120%;
     color: $white;
-		text-decoration: none;
+    text-decoration: none;
   }
 
   .header-center {
@@ -211,70 +208,67 @@
   }
 
   .header-title {
-		width: 511px;
-		font-family: "Jost", sans-serif;
-		font-weight: 600;
-		font-size: 48px;
-		line-height: 1.2;
-		color: $white;
+    width: 511px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2;
+    color: $white;
   }
 
   .header-p1 {
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-    color: var(--main-text);
-		width: 450px;
+    color: $light-gray;
+    width: 474px;
   }
 
   .header-img1 {
     position: absolute;
-    top: 178px;
-    left: 0;
+    width: 423px;
+    top: 110px;
+    right: 271px;
   }
 
   .header-img2 {
-    display: block;
-    margin-top: 41px;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 110px;
+    right: 107px;
   }
 
   .header-img3 {
-    display: block;
-    margin: 0 auto;
-    margin-top: 41px;
+    position: absolute;
+    top: 576px;
+    right: 344px;
+    width: 168px;
   }
 
   .header-p2 {
     width: 205px;
-    margin-top: 13px;
-    font-weight: 400;
-    font-size: 10px;
+     font-weight: 400;
+    font-size: 16px;
     line-height: 1.2;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
     color: $light-gray;
+    position: absolute;
+    top: 581px;
+    right: 107px;
+    margin: 0;
   }
   .header-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-		margin-left: auto;
-		margin-right: auto;
-    margin-top: 38px;
+    margin-top: 80px;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.2;
     color: $black;
     border-radius: 40px;
     padding: 16px 32px;
-    width: 202px;
-    height: 38px;
+    width: 232px;
+    height: 54px;
     background: $white;
-		cursor: pointer;
+    cursor: pointer;
   }
 }
-
