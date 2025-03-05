@@ -3,6 +3,12 @@
 @import 'typography.scss';
 @import 'header.scss';
 @import 'courses.scss';
+@import 'speakers.scss';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
 	font-family: 'Jost', sans-serif;
@@ -28,4 +34,9 @@ dd {
 ul[class],
 ol[class] {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

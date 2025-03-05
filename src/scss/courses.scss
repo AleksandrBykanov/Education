@@ -61,11 +61,13 @@
   .courses-container {
     max-width: 1280px;
   }
+
   .courses-list {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 16px;
     column-gap: 20px;
+    padding: 46px 35px;
   }
   .course-item1 {
     grid-column: span 2;
