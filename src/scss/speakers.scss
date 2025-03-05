@@ -20,6 +20,7 @@
   position: relative;
   padding: 0 20px;
 }
+
 .black {
   border-radius: 20px;
   width: 313px;
@@ -29,14 +30,9 @@
   margin-top: 32.5px;
 }
 
-
-
-
 .slide.active {
   display: block;
 }
-
-
 
 .slider-btn.active {
   background-color: $black;
@@ -68,12 +64,14 @@
     align-items: center;
     padding-top: 20px;
   }
+
   .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
     justify-content: center;
     align-items: center;
   }
+
   .slide {
     border: 1.5px solid #000;
     border-radius: 16px;
@@ -84,6 +82,7 @@
     display: none;
     padding: 40px 36px;
   }
+
   .slider {
     margin-top: 17.5px;
     width: 313px;
@@ -126,7 +125,6 @@
     color: $dark-slate-gray;
     margin-top: 4px;
   }
-
 }
 
 @media only screen and (min-width: 1001px) {
@@ -135,26 +133,28 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   .speaker-img {
     display: flex;
     align-items: center;
     padding: 50px 40px 50px 50px
   }
+
   .speakers-relative {
     position: relative;
     padding: 0;
     display: flex;
     min-width: 1064px;
   }
+
   .slider {
     margin-top: 67px;
     margin-left: 6px;
     width: 594px;
-
     overflow: hidden;
     position: relative;
-    
   }
+
   .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -163,6 +163,7 @@
     width: 582px;
     height: 227px;
   }
+
   .slide {
     border: 1.50px solid #000;
     border-radius: 16px;
@@ -218,8 +219,8 @@
     color: $dark-slate-gray;
     margin-top: 18px;
   }
+
   .speakers-wrapper {
     min-width: 1064px;
   }
-
 }
