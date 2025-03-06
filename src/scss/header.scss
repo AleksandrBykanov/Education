@@ -8,6 +8,7 @@
     min-width: 325px;
     height: 700px;
   }
+
   .header-list {
     display: none;
   }
@@ -32,6 +33,7 @@
     position: relative;
     cursor: pointer;
   }
+
   .header-logo-name {
     font-weight: 500;
     font-size: 12px;
@@ -39,6 +41,7 @@
     text-decoration: none;
     margin-left: 25px;
   }
+
   .header-logo-square {
     border-radius: 4px;
     width: 12px;
@@ -132,6 +135,7 @@
     text-align: center;
     color: $light-gray;
   }
+
   .header-btn {
     display: flex;
     justify-content: center;
@@ -164,6 +168,7 @@
     min-width: 1100px;
     height: 737px;
   }
+
   .header-logo,
   .mobile-btn {
     display: none;
@@ -253,6 +258,7 @@
     right: 107px;
     margin: 0;
   }
+  
   .header-btn {
     display: flex;
     justify-content: center;

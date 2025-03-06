@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliders = document.querySelectorAll('.speakers-container');
 
     sliders.forEach((slider) => {
-        const slides = slider.querySelectorAll('.dev');
+        const slides = slider.querySelectorAll('.speakers-wrapper');
         const prevButton = slider.querySelector('.pagination-btn.prev');
         const nextButton = slider.querySelector('.pagination-btn.next');
         const paginationInfo = slider.querySelector('.pagination-info');
@@ -33,6 +33,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.teaching-slider');
+  const slides = document.querySelectorAll('.teaching-wrapper');
+  const prevButton = document.querySelector('.teach-prev');
+  const nextButton = document.querySelector('.teach-next');
+  const paginationInfo = document.querySelector('.teach-info');
+  let currentIndex = 0;
+
+  function updateSlider(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      paginationInfo.textContent = `${index + 1} / ${slides.length}`;
+  }
+
+  prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider(currentIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider(currentIndex);
+  });
+
+  updateSlider(currentIndex);
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const sliders = document.querySelectorAll(".slider");
@@ -51,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 document.querySelectorAll(".career-btn").forEach(function (button) {
   button.addEventListener("click", function () {

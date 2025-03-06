@@ -15,7 +15,8 @@
   border-radius: 40px;
   background-color: $light-blue-gray;
   margin-top: 28px;
-
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .speakers-relative {
@@ -39,40 +40,6 @@
 .slider-btn.active {
   background-color: $black;
   color: $white;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 77px;
-  right: 298px;
-}
-
-.pagination-btn {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  margin: 0 5px;
-}
-
-.pagination-info {
-  font-size: 12px;
-}
-
-.slider-container {
-  display: flex;
-    overflow: hidden;
-    position: relative;
-}
-
-.dev {
-  min-width: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-.dev.active {
-  display: block;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -119,7 +86,7 @@
     gap: 3px;
     padding-bottom: 20px;
   }
-  
+
   .slider-btn {
     display: flex;
     justify-content: center;
@@ -143,6 +110,37 @@
     color: $dark-slate-gray;
     margin-top: 4px;
   }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    right: 144px;
+  }
+  
+  .pagination-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 0 5px;
+  }
+  
+  .pagination-info {
+    font-size: 12px;
+  }
+  
+  .slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+  }
+    
+  .speakers-wrapper.active {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1001px) {
@@ -155,7 +153,7 @@
   .speaker-img {
     display: flex;
     align-items: center;
-    padding: 50px 40px 50px 50px
+    padding: 50px 40px 50px 50px;
   }
 
   .speakers-relative {
@@ -183,7 +181,7 @@
   }
 
   .slide {
-    border: 1.50px solid #000;
+    border: 1.5px solid #000;
     border-radius: 16px;
     padding: 26px 15px;
     width: 582px;
@@ -240,5 +238,37 @@
 
   .speakers-wrapper {
     min-width: 1064px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 77px;
+    right: 298px;
+  }
+  
+  .pagination-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin: 0 5px;
+  }
+  
+  .pagination-info {
+    font-size: 12px;
+  }
+  
+  .slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 610px;
+  }
+  
+  
+  .speakers-wrapper.active {
+    display: block;
   }
 }
