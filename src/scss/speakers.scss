@@ -7,6 +7,7 @@
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .speakers-wrapper {
@@ -14,6 +15,7 @@
   border-radius: 40px;
   background-color: $light-blue-gray;
   margin-top: 28px;
+
 }
 
 .speakers-relative {
@@ -43,12 +45,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 77px;
+  right: 298px;
 }
 
 .pagination-btn {
   cursor: pointer;
   border: none;
-  background-color: #f0f0f0;
+  background-color: transparent;
   margin: 0 5px;
 }
 
@@ -56,6 +61,19 @@
   font-size: 12px;
 }
 
+.slider-container {
+  display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.dev {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.dev.active {
+  display: block;
+}
 
 @media only screen and (max-width: 1000px) {
   .speaker-img {
