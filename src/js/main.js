@@ -19,4 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.querySelectorAll('.career-btn').forEach(function(button) {
+    button.addEventListener('click', function() {
+      let slideId = this.getAttribute('data-slide');
+      document.querySelectorAll('.career-wrapper').forEach(function(slide) {
+        slide.classList.add('hidden');
+      });
+      document.getElementById(slideId).classList.remove('hidden');
+    });
+  });
+
   
