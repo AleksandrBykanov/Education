@@ -154,3 +154,48 @@ dots.forEach((dot, index) => {
 
 
 window.addEventListener('resize', checkScreenWidth);
+
+const items = document.querySelectorAll('.reviews-wrapper'); 
+const pags = document.querySelectorAll('.dots'); 
+const prevBtn = document.querySelector('.arrows-left'); 
+const nextBtn = document.querySelector('.arrows-right'); 
+const reviewsContainer = document.querySelector('.reviews-slider'); 
+let currentI = 1; 
+
+
+function update(index) {
+    const offset = index * 100; 
+    reviewsContainer.style.transform = `translateX(-${offset}%)`; 
+
+
+    items.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
+
+    pags.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+
+update(currentI);
+
+
+prevBtn.addEventListener('click', () => {
+    currentI = (currentI - 1 + items.length) % items.length; 
+    update(currentI);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentI = (currentI + 1) % items.length; 
+    update(currentI);
+});
+
+
+pags.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentI = index; 
+        update(currentI);
+    });
+});
