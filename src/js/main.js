@@ -90,4 +90,67 @@ document.querySelectorAll('.career-container').forEach(function (window) {
   });
 });
 
-  
+const slides = document.querySelectorAll('.tariffs-wrapper');
+const dots = document.querySelectorAll('.dot');
+const prevButton = document.querySelector('.arrow-left');
+const nextButton = document.querySelector('.arrow-right');
+const sliderContainer = document.querySelector('.tariffs-slider');
+let currentIndex = 1;
+let isSliderActive = true;
+
+function updateSlider(index) {
+    if (!isSliderActive) return; 
+
+    const slider = document.querySelector('.tariffs-slider');
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+
+function checkScreenWidth() {
+    if (window.matchMedia('(min-width: 1001px)').matches) {
+        isSliderActive = false; 
+        sliderContainer.style.transform = `translateX(0)`; 
+    } else {
+        isSliderActive = true; 
+        updateSlider(currentIndex); 
+    }
+}
+
+
+checkScreenWidth();
+updateSlider(currentIndex);
+
+
+prevButton.addEventListener('click', () => {
+    if (isSliderActive) {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider(currentIndex);
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (isSliderActive) {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider(currentIndex);
+    }
+});
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        if (isSliderActive) {
+            currentIndex = index;
+            updateSlider(currentIndex);
+        }
+    });
+});
+
+
+window.addEventListener('resize', checkScreenWidth);

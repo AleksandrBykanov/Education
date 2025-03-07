@@ -1,6 +1,15 @@
 .tariffs-container {
+  padding: 20px;
   width: 337px;
   margin: 80px auto 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.tariffs-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+
 }
 
 .tariffs-wrapper {
@@ -8,6 +17,23 @@
   padding: 45px 25px;
   margin-top: 28px;
   background-color: #e2e6ee;
+  min-width: 100%;
+
+}
+
+.tariffs-wrapper.active {
+  transition: background-color 0.5s ease, transform 0.2s ease-in-out;
+  background-color: #080808;
+  .tariffs-title,
+  .tariffs-s {
+    color: white;
+  }
+  .tariffs-p {
+    color: #e3e3e3;
+  }
+  .tariffs-item {
+    color: #f3f3f6;
+  }
 }
 
 .tariffs-title {
@@ -30,7 +56,6 @@
   justify-content: space-between;
   border-bottom: 1px solid #b5b5b5;
   padding-bottom: 20px;
-
 }
 
 .tariffs-p2 {
@@ -77,22 +102,22 @@
 
 .tariffs-span2 {
   font-weight: 700;
-font-size: 12px;
-line-height: 1.5;
-color: #1b1b1b;
-border-radius: 12px;
-padding: 0px 4px;
-width: 30px;
-height: 18px;
-background-color: #ffd400;
-position: absolute;
-right: 0;
-top: 13.5px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1b1b1b;
+  border-radius: 12px;
+  padding: 0px 4px;
+  width: 30px;
+  height: 18px;
+  background-color: #ffd400;
+  position: absolute;
+  right: 0;
+  top: 13.5px;
 }
 
 .tariffs-list {
- padding-top: 10px;
- padding-left: 15px;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 
 .tariffs-item {
@@ -116,7 +141,80 @@ top: 13.5px;
   font-size: 18px;
   line-height: 1.2;
   color: #000;
+  background-color: #b4b4b4;;
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1001px) {}
+.arrow {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.icon-left {
+  position: absolute;
+  left: -16px;
+  width: 9px;
+  height: 46px;
+}
+
+.icon-right {
+  position: absolute;
+  right: -293px;
+  width: 9px;
+  height: 46px;
+}
+
+.tariffs-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 2px;
+  left: 143px;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 7px;
+  margin: 0 5px;
+  background-color: #929292;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 10px;
+  height: 11px;
+  background-color: #000000;
+}
+
+@media only screen and (min-width: 1001px) {
+  .tariffs-container {
+    width: 1104px;
+  }
+  .arrow, .icon-left, .icon-right, 
+  .tariffs-pagination, .dot, .dot.active {
+    display: none;
+  }
+  .tariffs-wrapper {
+    min-width: 342px;
+    transition: transform 0.3s ease, scale 0.3s ease;
+    transform: scale(1);
+  }
+  .tariffs-wrapper.active {
+    transform: scale(1.05); 
+  }
+  .tariffs-slider {
+    gap: 20px;
+  }
+}
