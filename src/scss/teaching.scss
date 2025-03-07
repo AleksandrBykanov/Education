@@ -75,6 +75,7 @@
   .teach-prev, .teach-next {
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 }
 
@@ -154,10 +155,12 @@
     position: absolute;
     bottom: 88px;
     right: 205px;
+    font-size: 14px;
   }
 
   .teach-prev, .teach-next {
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 }

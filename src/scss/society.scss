@@ -1,0 +1,43 @@
+.society-title {
+  color: $white;
+  padding-bottom: 17px;
+}
+
+.society-p {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #c8c8c8;
+  width: 288px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .society-img {
+    width: 230px;
+    height: 188px;
+    margin: 0 auto;
+  }
+  .society-bg {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .society-p {
+    width: 509px;
+    font-size: 16px;
+    margin-bottom: 160px;
+  }
+
+  .society-bg {
+    position: absolute;
+    right: -12px;
+    top: -56px;
+  }
+
+  .ex {
+    position: absolute;
+    right: 67px;
+    top: 78px;
+  }
+}

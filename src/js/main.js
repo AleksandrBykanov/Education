@@ -78,13 +78,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-document.querySelectorAll(".career-btn").forEach(function (button) {
-  button.addEventListener("click", function () {
-    let slideId = this.getAttribute("data-slide");
-    document.querySelectorAll(".career-wrapper").forEach(function (slide) {
-      slide.classList.add("hidden");
+document.querySelectorAll('.career-container').forEach(function (window) {
+  window.querySelectorAll('.career-btn').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const slideId = this.getAttribute('data-slide');
+      window.querySelectorAll('.career-wrapper').forEach(function (slide) {
+        slide.classList.add('hidden');
+      });
+      document.getElementById(slideId).classList.remove('hidden');
     });
-    document.getElementById(slideId).classList.remove("hidden");
   });
 });
+
+  
