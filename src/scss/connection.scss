@@ -1,0 +1,152 @@
+.connection {
+  margin-top: 80px;
+}
+
+.connection-container {
+  width: 354px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.connection-wrapper {
+  border-radius: 40px;
+  width: 354px;
+  height: 466px;
+  background-color: #e2e6ee;
+  margin: 28px auto 0 auto;
+  padding: 47px 38px;
+}
+
+.connection-p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #636363;
+  margin-top: 12px;
+  padding-bottom: 12px;
+}
+
+.connection-input {
+  border-radius: 40px;
+  padding: 11px 14px;
+  margin-bottom: 12px;
+  width: 100%;
+  height: 36px;
+  border: none;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 10px;
+  color: #c9c9c9;
+}
+
+.connection-p2 {
+  font-weight: 400;
+  font-size: 10px;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.connection-a {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #414141;
+}
+
+.connection-btn {
+  width: 246px;
+  height: 39px;
+  border-radius: 40px;
+  padding: 16px 99px;
+  background-color: black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  bottom: 45px;
+  left: 54px;
+}
+
+.connection-img {
+  width: 332px;
+  height: 112px;
+  position: absolute;
+  bottom: -43px;
+  left: 0px;
+  z-index: 1;
+}
+.connection-img2 {
+  display: none;
+}
+
+@media only screen and (min-width: 1001px) {
+  .connection {
+    margin-top: 200px;
+  }
+
+  .connection-container {
+    width: 1064px;
+  }
+
+  .connection-wrapper {
+    width: 1064px;
+    height: 450px;
+    padding: 69px 50px;
+    display: flex;
+    gap: 86px;
+  }
+
+  .connection-img2 {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .connection-title {
+    font-weight: 800;
+    font-size: 32px;
+  }
+
+  .connection-p {
+    width: 455px;
+    font-size: 18px;
+    margin-top: 20px;
+    padding-bottom: 12px;
+  }
+
+  .connection-input {
+    padding: 16px 36px;
+    margin-bottom: 16px;
+    height: 52px;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #969696;
+  }
+
+  .connection-p2 {
+    font-size: 14px;
+    margin-top: 13px;
+  }
+
+  .connection-form {
+    position: relative;
+  }
+
+  .connection-btn {
+    width: 415px;
+    height: 52px;
+    font-size: 18px;
+    z-index: 2;
+    position: static;
+    margin-top: 25px;
+
+  }
+
+}
