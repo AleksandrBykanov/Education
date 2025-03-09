@@ -140,13 +140,21 @@
   }
 
   .connection-btn {
-    width: 415px;
+    width: 423px;
     height: 52px;
     font-size: 18px;
     z-index: 2;
     position: static;
-    margin-top: 25px;
+    margin-top: 27px;
+  }
 
+  .connection-img {
+    width: 332px;
+    height: 112px;
+    position: absolute;
+    bottom: -57px;
+    left: 617px;
+    z-index: 1;
   }
 
 }
