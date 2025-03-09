@@ -144,6 +144,10 @@
 }
 
 @media only screen and (min-width: 1001px) {
+  .speakers {
+    margin-top: 200px;
+  }
+
   .speakers-container {
     width: 1104px;
     margin-left: auto;
@@ -238,6 +242,7 @@
 
   .speakers-wrapper {
     min-width: 1064px;
+    margin-top: 40px;
   }
   
   .pagination {

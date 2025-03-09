@@ -1,7 +1,10 @@
+.reviews {
+  margin-top: 80px;
+}
 .reviews-container {
   width: 337px;
   padding: 20px;
-  margin: 28px auto 0 auto;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
@@ -118,6 +121,9 @@
 }
 
 @media only screen and (min-width: 1001px) {
+  .reviews {
+    margin-top: 200px;
+  }
   .reviews-bg {
     display: none;
   }

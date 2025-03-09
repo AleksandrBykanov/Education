@@ -1,3 +1,7 @@
+.tariffs {
+  margin-top: 80px;
+}
+
 .tariffs-container {
   padding: 20px;
   width: 337px;
@@ -199,6 +203,9 @@
 }
 
 @media only screen and (min-width: 1001px) {
+  .tariffs {
+    margin-top: 200px;
+  }
   .tariffs-container {
     width: 1104px;
   }

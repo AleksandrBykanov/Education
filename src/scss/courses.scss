@@ -10,7 +10,7 @@
 
 .courses-wrapper {
   min-width: 325px;
-  margin-top: 40px;
+  margin-top: 28px;
   border-radius: 40px;
   background: #070707;
 }
@@ -70,10 +70,15 @@
 
   .courses {
     min-width: 1100px;
+    margin-top: 200px;
   }
 
   .courses-container {
     max-width: 1104px;
+  }
+
+  .courses-wrapper {
+    margin-top: 40px;
   }
 
   .courses-list {

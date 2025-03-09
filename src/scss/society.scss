@@ -1,3 +1,7 @@
+.society {
+  margin-top: 80px;
+}
+
 .society-title {
   color: $white;
   padding-bottom: 17px;
@@ -23,6 +27,10 @@
 }
 
 @media only screen and (min-width: 1001px) {
+  .society {
+    margin-top: 200px;
+  }
+  
   .society-p {
     width: 509px;
     font-size: 16px;

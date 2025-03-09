@@ -1,3 +1,7 @@
+.career {
+  margin-top: 80px;
+}
+
 .career-container {
   width: 393px;
   padding: 20px;
@@ -60,6 +64,10 @@
 }
 
 @media only screen and (min-width: 1001px) {
+  .career {
+    margin-top: 200px;
+  }
+
   .career-container {
     width: 1104px;
   }
