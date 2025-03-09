@@ -205,6 +205,9 @@
     line-height: 120%;
     color: $white;
     text-decoration: none;
+    &:hover {
+      color: aqua;
+    }
   }
 
   .header-center {
@@ -225,6 +228,7 @@
     line-height: 120%;
     color: $light-gray;
     width: 474px;
+    margin-top: 20px;
   }
 
   .header-img1 {
@@ -275,5 +279,8 @@
     height: 54px;
     background: $white;
     cursor: pointer;
+    &:hover {
+      background-color: aqua;
+    }
   }
 }
