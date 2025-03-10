@@ -1,6 +1,18 @@
 @media only screen and (max-width: 1000px) {
+  .program-container {
+    width: 393px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+   }
+
   .program {
     margin-top: 80px;
+  }
+
+  .slider-program {
+    height: 100%;
   }
 
   .add {
@@ -8,16 +20,290 @@
     bottom: 21px;
     right: 132px;  
   }
+
+  .program-btn {
+    margin-top: 73px;
+  }
+
+  .accordeon {
+    width: 314px;
+    position: absolute;
+    top: 619px;
+    left: 40px;
+    z-index: 999;
+  
+  }
+  
+  .accordeon-header {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #070707;
+    border-radius: 28px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #070707;
+    background: #f9fafc;
+    padding: 5px 12px;
+  }
+  
+  .accordeon-menu {
+    width: 240px;
+    height: 15px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: black;
+    border-radius: 0 0 28px 28px;
+    display: flex;
+  }
+  .accordeon-svgs {
+    margin: 0 auto;
+    width: 101px;
+    display: flex;
+    height: 15px;
+    fill: white;
+  }
+
+  .accordeon-left,
+  .accordeon-plus,
+  .accordeon-right {
+    cursor: pointer;
+  }
+
+  
+  .accordeon-start,
+  .accordeon-finish {
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+  }
+  
+  .accordeon-slider {
+    position: relative;
+  }
+  
+  .accordeon-list {
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .accordeon-list.active {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .accordeon-item {
+    border: 1px solid #070707;
+    border-radius: 16px;
+    width: 314px;
+    background-color: #f9fafc;
+    padding: 22px 11px;
+  }
+  
+  .accordeon-item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #070707;
+  }
+  
+  .accordeon-p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #585454;
+  }
+  .accordeon-item-title2 {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #070707;
+    margin: 10px 0;
+  }
+  
+  .accordeon-btns {
+    display: flex;
+    gap: 13px;
+  }
+  
+  .accordeon-btn {
+    border: 1px solid #070707;
+    border-radius: 28px;
+    padding: 6px 16px;
+    background-color: #070707;
+    font-weight: 500;
+    font-size: 8px;
+    color: #ffffff;
+    height: 24px;
+  }
+  
+  .accordeon-btn-down {
+    border: 1px solid #000;
+    border-radius: 40px;
+    background-color: #f9fafc;
+    padding: 12px 111px;
+    height: 46px;
+    width: 314px;
+    cursor: pointer;
+  }
+
+
+
+
 }
 
 @media only screen and (min-width: 1001px) {
+  .program-container {
+    width: 1104px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+   }
   .program {
     margin-top: 200px;
+  }
+
+  .program-btn {
+    margin-top: 73px;
   }
 
   .add {
     position: absolute;
     bottom: 70px;
     right: 284px;  
+  }
+
+  .accordeon {
+    width: 466px;
+    position: absolute;
+    top: 451px;
+    right: 119px;
+    z-index: 999;
+  
+  }
+  
+  .accordeon-header {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #070707;
+    border-radius: 28px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #070707;
+    background: #f9fafc;
+    padding: 5px 12px;
+  }
+  
+  .accordeon-menu {
+    width: 370px;
+    height: 20px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: black;
+    border-radius: 0 0 28px 28px;
+    display: flex;
+  }
+  .accordeon-svgs {
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    height: 20px;
+    fill: white;
+  }
+
+  .accordeon-left,
+  .accordeon-plus,
+  .accordeon-right {
+    cursor: pointer;
+  }
+
+  
+  .accordeon-start,
+  .accordeon-finish {
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1;
+    color: #fff;
+  }
+  
+  .accordeon-slider {
+    position: relative;
+  }
+  
+  .accordeon-list {
+    width: 314px;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  
+  .accordeon-list.active {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .accordeon-item {
+    border: 1px solid #070707;
+    border-radius: 16px;
+    width: 314px;
+    background-color: #f9fafc;
+    padding: 22px 11px;
+  }
+  
+  .accordeon-item-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #070707;
+  }
+  
+  .accordeon-p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #585454;
+  }
+  .accordeon-item-title2 {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #070707;
+    margin: 10px 0;
+  }
+  
+  .accordeon-btns {
+    display: flex;
+    gap: 13px;
+  }
+  
+  .accordeon-btn {
+    border: 1px solid #070707;
+    border-radius: 28px;
+    padding: 6px 16px;
+    background-color: #070707;
+    font-weight: 500;
+    font-size: 8px;
+    color: #ffffff;
+    height: 24px;
+  }
+  
+  .accordeon-btn-down {
+    border: 1px solid #000;
+    border-radius: 40px;
+    background-color: #f9fafc;
+    padding: 12px 111px;
+    height: 46px;
+    width: 314px;
+    cursor: pointer;
   }
 }

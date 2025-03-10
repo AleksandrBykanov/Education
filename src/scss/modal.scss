@@ -9,6 +9,7 @@
   }
 
   .modal.active {
+    min-width: 393px;
     display: block;
     background-color: rgba(68, 68, 68, 0.7);
     border-radius: 0 0 72px 72px;

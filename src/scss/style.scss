@@ -1,3 +1,20 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import 'typography.scss';
+@import 'header.scss';
+@import 'courses.scss';
+@import 'speakers.scss';
+@import 'cases.scss';
+@import 'teaching.scss';
+@import 'career.scss';
+@import 'program.scss';
+@import 'society.scss';
+@import 'tariffs.scss';
+@import 'reviews.scss';
+@import 'connection.scss';
+@import 'footer.scss';
+@import 'modal.scss';
+
 
 *,
 *::before,
@@ -35,19 +52,4 @@ img {
   display: block;
 }
 
-@import 'normalize.css';
-@import 'variables.scss';
-@import 'typography.scss';
-@import 'header.scss';
-@import 'courses.scss';
-@import 'speakers.scss';
-@import 'cases.scss';
-@import 'teaching.scss';
-@import 'career.scss';
-@import 'program.scss';
-@import 'society.scss';
-@import 'tariffs.scss';
-@import 'reviews.scss';
-@import 'connection.scss';
-@import 'footer.scss';
-@import 'modal.scss';
+

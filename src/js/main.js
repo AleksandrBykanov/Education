@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const paginationInfo = slider.querySelector('.pagination-info');
         let currentIndex = 0;
 
+        
+
         function updateSlider(index) {
             slides.forEach((slide, i) => {
                 slide.style.transform = `translateX(-${index * 100}%)`;
@@ -43,6 +45,56 @@ document.addEventListener('DOMContentLoaded', function () {
         updateSlider(currentIndex);
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.querySelector('.program-container');
+  const slides = slider.querySelectorAll('.speakers-wrapper');
+  const prevButton = slider.querySelector('.accordeon-left');
+  const nextButton = slider.querySelector('.accordeon-right');
+  const start = slider.querySelector('.accordeon-start');
+  const finish = slider.querySelector('.accordeon-finish');
+  let currentIndex = 0;
+  finish.textContent = slides.length;
+
+  function updateSlider(index) {
+    slides.forEach((slide, i) => {
+      slide.style.transform = `translateX(-${index * 100}%)`;
+      slide.classList.toggle('active', i === index);
+    });
+    start.textContent = `${index + 1}`;
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider(currentIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider(currentIndex);
+  });
+
+  updateSlider(currentIndex);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const content = document.querySelector('.accordeon-list');
+    const plusButton = document.querySelector('.accordeon-plus');
+    const collapseButton = document.querySelector('.accordeon-btn-down');
+  
+    plusButton.addEventListener('click', () => {
+      content.classList.remove('active');
+    });
+  
+    collapseButton.addEventListener('click', () => {
+      content.classList.add('active');
+    });
+  });
+  
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +141,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
 
 document.querySelectorAll('.career-container').forEach(function (window) {
   window.querySelectorAll('.career-btn').forEach(function (button) {
