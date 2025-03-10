@@ -1,0 +1,91 @@
+@media only screen and (max-width: 1000px) {
+  .modal {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 700px;
+  }
+
+  .modal.active {
+    display: block;
+    background-color: rgba(68, 68, 68, 0.7);
+    border-radius: 0 0 72px 72px;
+  }
+
+   .modal-wrapper {
+    width: 50%;
+    border-radius: 0 24px 24px 0;
+    background-color: #e2e6ef;
+  }
+
+  .modal-window {
+    width: 189px;
+    height: 701px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .modal-logo {
+    width: 70px;
+    height: 27px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .modal-logo-name {
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-left: 25px;
+  }
+
+  .modal-logo-square {
+    border-radius: 4px;
+    width: 13px;
+    height: 13px;
+    background: #c07ff2;
+    position: absolute;
+  }
+
+  .modal-logo-circle {
+    border-radius: 8px;
+    width: 13px;
+    height: 13px;
+    background: #09aff4;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+  }
+
+  .modal-list {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    padding-left: 16px;
+  }
+
+  .modal-link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    border-radius: 35px;
+    padding: 8px 12px;
+    &:hover {
+      background-color: #000;
+      color: white;
+    }
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .modal {
+    display: none;
+  }
+}

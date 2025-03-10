@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0 0 72px 72px;
-    min-width: 325px;
+    min-width: 393px;
     height: 700px;
   }
 
@@ -152,8 +152,66 @@
     padding: 16px 32px;
     width: 202px;
     height: 38px;
-    background: $white;
+    background-color: $white;
     cursor: pointer;
+    &:hover {
+      background-color: aqua;
+    }
+  }
+
+  .burger {
+    position: relative;
+    width: 20px;
+    height: 14px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .burger-input[type="checkbox"] {
+    display: none;
+  }
+
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  .burger span:nth-of-type(1) {
+    top: 0;
+    transform-origin: left center;
+  }
+
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  .burger input:checked ~ span:nth-of-type(2) {
+    opacity: 0;
+    width: 0%;
+  }
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 14px;
+    left: 5px;
   }
 }
 
@@ -253,7 +311,7 @@
 
   .header-p2 {
     width: 205px;
-     font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
     color: $light-gray;
@@ -262,7 +320,7 @@
     right: 107px;
     margin: 0;
   }
-  
+
   .header-btn {
     display: flex;
     justify-content: center;
@@ -277,10 +335,14 @@
     padding: 16px 32px;
     width: 232px;
     height: 54px;
-    background: $white;
+    background-color: $white;
     cursor: pointer;
     &:hover {
       background-color: aqua;
     }
+  }
+  
+  .burger-input[type="checkbox"] {
+    display: none;
   }
 }
