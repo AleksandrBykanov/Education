@@ -221,47 +221,72 @@ dots.forEach((dot, index) => {
 
 window.addEventListener('resize', checkScreenWidth);
 
-const items = document.querySelectorAll('.reviews-wrapper'); 
-const pags = document.querySelectorAll('.dots'); 
-const prevBtn = document.querySelector('.arrows-left'); 
-const nextBtn = document.querySelector('.arrows-right'); 
-const reviewsContainer = document.querySelector('.reviews-slider'); 
-let currentI = 1; 
 
 
+const items = document.querySelectorAll('.reviews-wrapper');
+const pagsContainer = document.querySelector('.reviews-pagination'); // Контейнер для точек
+const prevBtn = document.querySelector('.arrows-left');
+const nextBtn = document.querySelector('.arrows-right');
+const reviewsContainer = document.querySelector('.reviews-slider');
+let currentI = 1;
+
+// Функция для генерации точек
+function generateDots() {
+    pagsContainer.innerHTML = ''; // Очистить старые точки
+    const dotsCount = window.innerWidth > 1001 ? Math.ceil(items.length / 3) : items.length;
+
+    for (let i = 0; i < dotsCount; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dots');
+        if (i === currentI) dot.classList.add('active');
+        pagsContainer.appendChild(dot);
+
+        dot.addEventListener('click', () => {
+            currentI = i;
+            update(currentI);
+        });
+    }
+}
+
+// Функция для обновления слайдера
 function update(index) {
-    const offset = index * 100; 
-    reviewsContainer.style.transform = `translateX(-${offset}%)`; 
-
+    const slidesPerPage = window.innerWidth > 1001 ? 1 : 1;
+    const offset = index * 100 * slidesPerPage;
+    reviewsContainer.style.transform = `translateX(-${offset}%)`;
 
     items.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+        slide.classList.toggle('active', i >= index * slidesPerPage && i < (index + 1) * slidesPerPage);
     });
 
-
+    const pags = document.querySelectorAll('.dots');
     pags.forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
 }
 
+// Событие для обработки кнопки "Назад"
+prevBtn.addEventListener('click', () => {
+    const slidesPerPage = window.innerWidth > 1001 ? 3 : 1;
+    const maxIndex = Math.ceil(items.length / slidesPerPage);
+    currentI = (currentI - 1 + maxIndex) % maxIndex;
+    update(currentI);
+});
 
+// Событие для обработки кнопки "Вперёд"
+nextBtn.addEventListener('click', () => {
+    const slidesPerPage = window.innerWidth > 1001 ? 3 : 1;
+    const maxIndex = Math.ceil(items.length / slidesPerPage);
+    currentI = (currentI + 1) % maxIndex;
+    update(currentI);
+});
+
+// Перегенерация точек при изменении размера окна
+window.addEventListener('resize', () => {
+    generateDots();
+    update(currentI);
+});
+
+// Инициализация
+generateDots();
 update(currentI);
 
-
-prevBtn.addEventListener('click', () => {
-    currentI = (currentI - 1 + items.length) % items.length; 
-    update(currentI);
-});
-
-nextBtn.addEventListener('click', () => {
-    currentI = (currentI + 1) % items.length; 
-    update(currentI);
-});
-
-
-pags.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentI = index; 
-        update(currentI);
-    });
-});
